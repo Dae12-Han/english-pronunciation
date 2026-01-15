@@ -1,14 +1,23 @@
 
 # AI Pronunciation Trainer 
-AI를 사용한 영어 발음 평가 
+This tool uses AI to evaluate your pronunciation so you can improve it and be understood more clearly. You can go straight test the tool at https://aipronunciationtr.com (please use the chrome browser for desktop and have some patience for it to "warm-up" :) ). 
 
-## 설치
-안전하게 가상환경을 먼저 만들었습니다.   
-원본 코드에 의하면 파이썬 버전의 최소 python 3.X 이상이여야합니다.
-```
-conda create -n eng-env python=3.9
-```
-로컬에서 프로그램을 돌리기 위해서는, requirements 설치와 main 파이썬 파일을 실행하여야합니다.
+![](images/MainScreen.jpg)
+
+## !! Update !! 
+
+I'm happy (and surprised!) that apparently a considerable amount of people are using this tool, and this made -even more- clear that many things could be improved. I tried to solve the most critical issues with small changes on the code base, so that now: 
+* Requirements are relaxed and should work with modern python versions (tested with 3.12)
+* Whisper is used as standard ASR model 
+* You can edit the text you want to speak by clicking on it and typing (please do before an evaluation)
+* Code does not dependent on OR-Tools anymore, which makes is somewhat lighter and faster 
+* Code is slightly changed so it is now easier to add more languages and change the database. 
+* Errors will be shown on the console for easier debugging. 
+
+I hope this facilitates the use of the tool and you have more fun (and learning!) with it. I plan to add those changes to the server in the coming weeks when I find some more time.
+
+## Installation 
+To run the program locally, you need to install the requirements and run the main python file:
 ```
 pip install -r requirements.txt
 python webApp.py
